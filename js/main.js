@@ -33,3 +33,32 @@ setInterval(slider, 4000);
 //     $('.slide_move').eq(i).fadeIn().siblings().fadeOut();
 //     a = i;
 // })
+
+//책 슬라이드
+
+// $(document).ready(function(){
+//     function prev(){
+//         $(".slide li:last").prependTo(".slide");
+//         $(".slide").css("margin-left",-700);
+//         $(".slide").stop().animate({marginLeft:0},800);
+//     } 
+
+//     function next(){
+//         $(".slide").stop().animate({marginLeft:-700},800,function(){
+//             $(".slide li:first").appendTo(".slide");
+//             $(".slide").css({marginLeft:0});
+//         });
+//     }
+
+//     // 자동 슬라이드
+//     setInterval(next,4000); 
+
+//     // 버튼 슬라이드
+//     $(".prev").click(function(){
+//         prev();
+//     });
+
+//     $(".next").click(function(){
+//         next();
+//     });
+// });
