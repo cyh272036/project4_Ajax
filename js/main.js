@@ -1,25 +1,35 @@
 //광고 슬라이드
-
-var slideIndex = 1;
-
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("slide_move");
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = 0;
+var a = 0;
+function slider() {
+    a++;
+    if (a > $('.slide_move:last').index()) {
+        a = 0;
     }
-    slideIndex++;
+    $('.slide_move').eq(a - 1).stop().fadeOut(700);
+    $('.slide_move').eq(a).stop().fadeIn(1000);
+    // $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
 
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.opacity = 1;
+    $(".prev").click(function () { 
+        $('.slide_move').eq(a - 1).stop().fadeOut(700);
+    });
+};
+setInterval(slider, 4000);
 
-    setTimeout(showSlides, 3000);
-}
+// $('.prev').click(function () {
+//     a--;
+//     $('.slide_move').eq(a).stop().fadeIn(1000).prant().siblings().fadeOut(700);
+//     $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
+// })
 
+// $('.next').click(function () {
+//     a++;
+//     $('.slide_move').eq(a).stop().fadeIn(1000).siblings().fadeOut(700);
+//     $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
+// })
 
-
-
-
+// $('.visual_nav1 li').click(function () {
+//     $(this).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
+//     var i = $(this).index();
+//     $('.slide_move').eq(i).fadeIn().siblings().fadeOut();
+//     a = i;
+// })
