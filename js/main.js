@@ -9,7 +9,7 @@ function slider() {
     $('.slide_move').eq(a).stop().fadeIn(1000);
     // $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
 
-    $(".prev").click(function () { 
+    $(".prev").click(function () {
         $('.slide_move').eq(a - 1).stop().fadeOut(700);
     });
 };
@@ -34,31 +34,126 @@ setInterval(slider, 4000);
 //     a = i;
 // })
 
-//책 슬라이드
 
-// $(document).ready(function(){
-//     function prev(){
-//         $(".slide li:last").prependTo(".slide");
-//         $(".slide").css("margin-left",-700);
-//         $(".slide").stop().animate({marginLeft:0},800);
-//     } 
+//급상승 슬라이드
+$(document).ready(function () {
+    function prev() {
+        $(".look_content .content_box:last").prependTo(".look_content");
+        $(".look_content").css("margin-left", -300);
+        $(".look_content").stop().animate({ marginLeft: 0 }, 800);
+    }
 
-//     function next(){
-//         $(".slide").stop().animate({marginLeft:-700},800,function(){
-//             $(".slide li:first").appendTo(".slide");
-//             $(".slide").css({marginLeft:0});
-//         });
-//     }
+    function next() {
+        $(".look_content").stop().animate({ marginLeft: -300 }, 800, function () {
+            $(".look_content .content_box:first").appendTo(".look_content");
+            $(".look_content").css({ marginLeft: 0 });
+        });
+    }
 
-//     // 자동 슬라이드
-//     setInterval(next,4000); 
+    // 버튼 슬라이드
+    $(".prevbutton").click(function () {
+        prev();
+    });
 
-//     // 버튼 슬라이드
-//     $(".prev").click(function(){
-//         prev();
-//     });
+    $(".nextbutton").click(function () {
+        next();
+    });
 
-//     $(".next").click(function(){
-//         next();
-//     });
-// });
+});
+
+//교보 오리지널 슬라이드
+$(document).ready(function () {
+    function originPrev() {
+        $(".origin_content .content_box:last").prependTo(".origin_content");
+        $(".origin_content").css("margin-left", -300);
+        $(".origin_content").stop().animate({ marginLeft: 0 }, 800);
+    }
+
+    function originNext() {
+        $(".origin_content").stop().animate({ marginLeft: -300 }, 800, function () {
+            $(".origin_content .content_box:first").appendTo(".origin_content");
+            $(".origin_content").css({ marginLeft: 0 });
+        });
+    }
+
+    // 버튼 슬라이드
+    $(".prevbutton").click(function () {
+        originPrev();
+    });
+
+    $(".nextbutton").click(function () {
+        originNext();
+    });
+
+});
+
+//big wide 광고 슬라이드
+$(document).ready(function () {
+    function slide() {
+        $(".big_wide_inner").stop().animate({ marginLeft: -1200 }, 800, function () {
+            $(".big_wide_inner img:first").appendTo(".big_wide_inner");
+            $(".big_wide_inner").css({ marginLeft: 0 });
+        });
+    }
+    setInterval(slide, 4000)
+});
+
+//히트 버튼 슬라이드
+$(document).ready(function () {
+    function hitPrev() {
+        $(".hit_img_inner .hit_img:last").prependTo(".hit_img_inner");
+        $(".hit_img_inner").css("margin-left", -280);
+        $(".hit_img_inner").stop().animate({ marginLeft: 0 }, 800);
+    }
+
+    function hitNext() {
+        $(".hit_img_inner").stop().animate({ marginLeft: -280 }, 800, function () {
+            $(".hit_img_inner .hit_img:first").appendTo(".hit_img_inner");
+            $(".hit_img_inner").css({ marginLeft: 0 });
+        });
+    }
+
+    // 버튼 슬라이드
+    $(".prev_control").click(function () {
+        hitPrev();
+    });
+
+    $(".next_control").click(function () {
+        hitNext();
+    });
+
+    //드래그 스크롤
+    const slider = document.querySelector('.hit_right');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', e => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = x - startX;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    //casting
+
+
+});
