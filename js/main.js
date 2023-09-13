@@ -15,25 +15,6 @@ function slider() {
 };
 setInterval(slider, 4000);
 
-// $('.prev').click(function () {
-//     a--;
-//     $('.slide_move').eq(a).stop().fadeIn(1000).prant().siblings().fadeOut(700);
-//     $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-// })
-
-// $('.next').click(function () {
-//     a++;
-//     $('.slide_move').eq(a).stop().fadeIn(1000).siblings().fadeOut(700);
-//     $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-// })
-
-// $('.visual_nav1 li').click(function () {
-//     $(this).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-//     var i = $(this).index();
-//     $('.slide_move').eq(i).fadeIn().siblings().fadeOut();
-//     a = i;
-// })
-
 //오늘의 선택 슬라이드(왼쪽)
 $(document).ready(function () {
     function todayPrev() {
@@ -64,13 +45,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     function todayPrev2() {
         $(".today_content_right .content_box:last").prependTo(".today_content_right ");
-        $(".today_content_left").css("margin-left", -152);
-        $(".today_content_left").stop().animate({ marginLeft: 0 }, 800);
+        $(".today_content_right").css("margin-left", -152);
+        $(".today_content_right").stop().animate({ marginLeft: 0 }, 800);
     }
 
     function todayNext2() {
-        $(".today_content_right ").stop().animate({ marginLeft: -152 }, 800, function () {
-            $(".today_content_right  .content_box:first").appendTo(".today_content_right ");
+        $(".today_content_right").stop().animate({ marginLeft: -152 }, 800, function () {
+            $(".today_content_right .content_box:first").appendTo(".today_content_right");
             $(".today_content_right ").css({ marginLeft: 0 });
         });
     }
@@ -85,6 +66,18 @@ $(document).ready(function () {
     });
 
 });
+
+// //오늘의 선택 리스트 변경
+// $('.bs_headline li').click(function () {
+//     let i = $(this).index();
+//     $('.list').eq(i).show().css('display', 'flex').siblings('.list').hide();
+// });
+
+// $('.bs_headline li:first').css('color', 'black');
+// $('.bs_headline li').click(function () {
+//     $('li').css('color', '');
+//     $(this).css('color', 'black');
+// });
 
 
 //급상승 슬라이드

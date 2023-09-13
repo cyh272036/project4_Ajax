@@ -150,14 +150,12 @@
     height: 500px;
     position: relative;
     margin: 0 auto;
+    background-color: forestgreen;
 
     margin: {
         top: 70px;
         bottom: 150px;
     }
-
-    ;
-    background-color: salmon;
 
     .today_title {
         width: 100%;
@@ -205,15 +203,6 @@
         }
     }
 
-    .today_content {
-        position: relative;
-        width: 100%;
-        height: 370px;
-        justify-content: space-between;
-        align-items: center;
-        background-color: indigo;
-        margin-top: 30px;
-
         .prevbutton {
             width: 44px;
             height: 44px;
@@ -253,17 +242,30 @@
             }
         }
 
+    .today_content {
+        position: relative;
+        width: 100%;
+        height: 370px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: indigo;
+        margin-top: 30px;
+        top: 0;
+        left: 0;
+
         .today_content_left_wrap {
             width: 650px;
             height: auto;
             overflow: hidden;
-            position: relative;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
             left: 0;
             top: 9%;
 
             .today_content_left {
                 width: 3900px;
-                height: auto;
+                height: 300px;
                 align-items: center;
                 background-color: darkgray;
 
@@ -315,18 +317,19 @@
         }
 
         .today_content_right_wrap {
-                width: 444px;
-                position: absolute;
-                overflow: hidden;
-                right: 0;
-                top: 15%;
-                height: 260px;
-                background-color: saddlebrown;
+            width: 444px;
+            position: absolute;
+            overflow: hidden;
+            right: 0;
+            top: 16%;
+            height: auto;
+            background-color: saddlebrown;
 
             .today_content_right {
                 position: relative;
                 left: -152px;
                 width: 900px;
+                height: 100%;
                 display: flex;
                 justify-content: space-between;
                 background-color: rgb(193, 245, 179);
@@ -354,6 +357,8 @@
     }
 
 }
+
+
 
 //중간 광고(section)
 #advert {
@@ -912,7 +917,6 @@
 }
 
 //casting
-
 #casting_wrap {
     width: 100%;
     height: 470px;
