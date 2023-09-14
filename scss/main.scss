@@ -248,24 +248,23 @@
         height: 370px;
         justify-content: space-between;
         align-items: center;
-        // background-color: indigo;
+        background-color: indigo;
         margin-top: 30px;
         top: 0;
         left: 0;
 
-        .today_content_left_wrap {
-            width: 600px;
-            height: 900px;
-            // position: absolute;
-            // overflow: hidden;
-            // left: 0;
-            // top: 16%;
+        .today_content_right_wrap {
+            width: 444px;
+            position: absolute;
+            overflow: hidden;
+            right: 0;
+            top: 16%;
             height: auto;
-            background-color: rgb(255, 244, 235);
+            background-color: saddlebrown;
 
-            .today_content_left {
-                // position: relative;
-                // left: -152px;
+            .today_content_right {
+                position: relative;
+                left: -152px;
                 width: 900px;
                 height: 100%;
                 display: flex;
