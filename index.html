@@ -320,13 +320,12 @@
                         <img src="img/ico_plus_h10_bold.png" alt="plus">
                     </div>
                 </div>
-                <div class="prevbutton"></div>
-                <div class="nextbutton"></div>
-
                 <!-- 전체 -->
-                <div class="today_content">
+                <div class="today_content all">
+                    <div class="prevbutton" id="perv_1"></div>
+                    <div class="nextbutton" id="next_1"></div>
                     <div class="today_content_left_wrap">
-                        <div class="today_content_left">
+                        <div class="today_content_left" id="left_one">
                             <div class="content_box"></div>
                             <div class="content_box"></div>
                             <div class="content_box"></div>
@@ -337,7 +336,7 @@
                     </div>
 
                     <div class="today_content_right_wrap">
-                        <div class="today_content_right">
+                        <div class="today_content_right" id="right_one">
                             <div class="content_box"></div>
                             <div class="content_box"></div>
                             <div class="content_box"></div>
@@ -348,6 +347,57 @@
                     </div>
                 </div>
                 <!-- 국내도서 -->
+                <div class="today_content domestic">
+                    <div class="prevbutton" id="prev_2"></div>
+                    <div class="nextbutton" id="next_2"></div>
+                    <div class="today_content_left_wrap">
+                        <div class="today_content_left" id="left_two">
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                        </div>
+                    </div>
+
+                    <div class="today_content_right_wrap">
+                        <div class="today_content_right" id="right_two">
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 외국도서 -->
+                <div class="today_content globel">
+                    <div class="prevbutton" id="prev_3"></div>
+                    <div class="nextbutton" id="next_3"></div>
+                    <div class="today_content_left_wrap">
+                        <div class="today_content_left" id="left_three">
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                        </div>
+                    </div>
+
+                    <div class="today_content_right_wrap">
+                        <div class="today_content_right" id="right_three">
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                            <div class="content_box"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -366,7 +416,7 @@
                     <h1><a href="#">급상승! 많이 보고 있는 상품</a></h1>
                 </div>
                 <div class="look_slide">
-                    <div class="prevbutton"></div>
+                    <div class="prevbutton" id="prev_4"></div>
                     <div class="look_content_wrap">
                         <div class="look_content">
                             <a href="">
@@ -395,7 +445,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="nextbutton"></div>
+                    <div class="nextbutton" id="next_4"></div>
                 </div>
         </section>
 
@@ -599,33 +649,101 @@
 
         <!-- casting -->
         <section>
-            <div id="casting_wrap">
-                <div class="casting_inner">
-                    <div class="casting_inner_headline">
-                        <img src="img/welcome_casting_logo_ink@2x.png" alt="casting">
-                        <div class="more">
-                            <h4>더보기</h4>
-                            <img src="img/ico_plus_h10_bold_white@2x.png" alt="plus">
+            <div class="casting_big_wrap">
+                <div id="casting_wrap" class="casting_one" style="background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./img/fhc0ymth.jpg);">
+                    <div class="casting_inner">
+                        <div class="casting_inner_headline">
+                            <img src="img/welcome_casting_logo_ink@2x.png" alt="casting">
+                            <div class="more">
+                                <h4>더보기</h4>
+                                <img src="img/ico_plus_h10_bold_white@2x.png" alt="plus">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="casting_inner_content">
-                        <div class="casting_content_text">
-                            <h3>잘 읽히는 에세이를 쓰려면</h3>
-                            <p><span>by </span>교보문고</p>
-                            <div class="casting_control">
-                                <div class="prev_control"><img src="img/btn_swiper_arr_white@2x.png" alt="arrow_white">
-                                </div>
-                                <div class="next_control"><img src="img/btn_swiper_arr_white@2x.png" alt="arrow_white">
+                        <div class="casting_inner_content">
+                            <div class="casting_content_text">
+                                <h3>잘 읽히는 에세이를 쓰려면</h3>
+                                <p><span>by </span>교보문고</p>
+                                <div class="casting_control">
+                                    <div class="prev_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
+                                    <div class="next_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="casting_inner_thumb" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/fhc0ymth.jpg);">
+                            <a href="">
+                                <div class="video_icon"></div>
+                            </a>
+                        </div>
+                    </div>
+ 
+                    <div class="casting_inner">
+                        <div class="casting_inner_headline">
+                            <img src="img/welcome_casting_logo_ink@2x.png" alt="casting">
+                            <div class="more">
+                                <h4>더보기</h4>
+                                <img src="img/ico_plus_h10_bold_white@2x.png" alt="plus">
+                            </div>
+                        </div>
+
+                        <div class="casting_inner_content">
+                            <div class="casting_content_text">
+                                <h3>식물집사 김금희 작가의<br>
+                                    출간 비하인드 브이로그</h3>
+                                <p><span>by </span>교보문고</p>
+                                <div class="casting_control">
+                                    <div class="prev_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
+                                    <div class="next_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="casting_inner_thumb" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/dudgewhd-720.jpg);">
+                            <a href="">
+                                <div class="video_icon"></div>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="casting_inner_thumb">
-                        <a href="">
-                            <div class="video_icon"></div>
-                        </a>
+                    <div class="casting_inner">
+                        <div class="casting_inner_headline">
+                            <img src="img/welcome_casting_logo_ink@2x.png" alt="casting">
+                            <div class="more">
+                                <h4>더보기</h4>
+                                <img src="img/ico_plus_h10_bold_white@2x.png" alt="plus">
+                            </div>
+                        </div>
+
+                        <div class="casting_inner_content">
+                            <div class="casting_content_text">
+                                <h3>단편소설의 거장 월리엄 트레버가<br>
+                                    마지막 순간에 생을 관조했던 작품</h3>
+                                <p><span>by </span>교보문고</p>
+                                <div class="casting_control">
+                                    <div class="prev_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
+                                    <div class="next_control"><img src="img/btn_swiper_arr_white@2x.png"
+                                            alt="arrow_white">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="casting_inner_thumb" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/ew8uf34d-720.jpg);">
+                            <a href="">
+                                <div class="video_icon"></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,7 +760,7 @@
                     </div>
                 </div>
                 <div class="origin_slide">
-                    <div class="prevbutton"></div>
+                    <div class="prevbutton" id="prev_5"></div>
                     <div class="origin_wrap">
                         <div class="origin_content">
                             <a href="">
@@ -671,7 +789,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="nextbutton"></div>
+                    <div class="nextbutton" id="next_5"></div>
                 </div>
             </div>
         </section>

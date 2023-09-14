@@ -6,40 +6,134 @@ $(document).ready(function () {
     all = ["1%를 읽는 힘", "고통에 관하여", "또 못 버린 물건들", '문학의 역사', '삶은 예술로 빛난다', '대화력의 비밀'];
     for (i = 0; i < all.length; i++) {
 
-    $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book",
-        data: { query: all[i] },
-        async: false,
-        headers: { Authorization: "KakaoAK e70bdf50a24dc5ded8f6286f7985e986" }
-    })
-        .done(function (msg) {
-            let origin = msg.documents;
-            //썸네일이 빈 문자열인것은 제외
-            let data = origin.filter((val) => {
-                return val.thumbnail != '';
-            })
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book",
+            data: { query: all[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK e70bdf50a24dc5ded8f6286f7985e986" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
 
 
-                $(".left_inner").eq(i).find(".content_box").append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $(".left_inner").eq(i).find(".content_text").append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
-                $(".left_inner").eq(i).find(".content_text").append("<p>" + data[0].sale_price + "원</p>");
-                $(".left_inner").eq(i).find(".content_text").append("<p>" + data[0].authors + "</p");
+                $("#left_one >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_one >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_one >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
-                var str = data[0].contents;
-                var str2 = str.substring(0, 130);
-                $(".left_inner").eq(i).find(".content_text").append("<p>" + str2 + "</p>");
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
 
-                $(".today_content_right >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $(".today_content_right >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
-                $(".today_content_right >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
-        });
+                $("#left_one >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $("#left_one >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
+                $("#left_one >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
+
+                $("#right_one >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_one >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_one >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
+            });
     }
-    
+
     //오늘의 책2 - 국내
 
 
     //급상승
+    var up;
+    up = ["도시와 그 불확실한 벽", "집착의 법칙", "모든 멋진 일에는", '예민', '넷플릭스', '이별', '가짜 노동', '꽃'];
+    for (i = 0; i < up.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book",
+            data: { query: up[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK e70bdf50a24dc5ded8f6286f7985e986" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+
+                $("#left_two >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_two  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_two  >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
+
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
+
+                $("#left_two  >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $("#left_two  >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
+                $("#left_two  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
+
+                $("#right_two  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_two  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_two  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
+            });
+    }
+
+    //오늘의 책3 - 국외
+    //급상승
+    var globel;
+    globel = ["Oppenheimer", "Wonder", "Crying in H Mart", 'Be Your Future Self Now', 'Never Give an Inch', 'Lembke', 'Spare', 'Chip War'];
+    for (i = 0; i < globel.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book",
+            data: { query: globel[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK e70bdf50a24dc5ded8f6286f7985e986" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+
+                $("#left_three >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_three  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_three  >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
+
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
+
+                $("#left_three  >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $("#left_three  >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
+                $("#left_three  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
+
+                $("#right_three  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_three  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_three  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
+            });
+    }
+
+    //리스트 페이지 변경
+    $('.today_title_list li').click(function () {
+        let i = $(this).index();
+        console.log(i)
+        $('.today_content').eq(i).show().css('display', 'flex').siblings('.today_content').hide();
+    });
+
+    $('.today_title_list li').click(function () {
+        $('.today_title_list li').css('color', '');
+        $(this).css('color', 'black');
+    });
+
+
+    //급상승!
     var up;
     up = ["도시와 그 불확실한 벽", "집착의 법칙", "모든 멋진 일에는", '예민', '넷플릭스', '이별', '가짜 노동', '꽃'];
     for (i = 0; i < up.length; i++) {
@@ -57,7 +151,7 @@ $(document).ready(function () {
                 let data = origin.filter((val) => {
                     return val.thumbnail != '';
                 })
-                
+
                 $('.look_content .content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
                 $('.look_content .content_box').eq(i).append("<p>" + data[0].authors + "</p>");
                 $('.look_content .content_box').eq(i).append("<h3>" + data[0].title + "</h3>");

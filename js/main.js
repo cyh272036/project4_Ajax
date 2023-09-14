@@ -15,70 +15,161 @@ function slider() {
 };
 setInterval(slider, 4000);
 
-//오늘의 선택 슬라이드(왼쪽)
+//오늘의 선택 슬라이드(왼쪽) - 1
 $(document).ready(function () {
     function todayPrev() {
-        $(".today_content_left .left_inner:last").prependTo(".today_content_left");
-        $(".today_content_left").css("margin-left", -650);
-        $(".today_content_left").stop().animate({ marginLeft: 0 }, 800);
+        $("#left_one .content_box:last").prependTo("#left_one");
+        $("#left_one").css("margin-left", -600);
+        $("#left_one").stop().animate({ marginLeft: 0 }, 800);
     }
 
     function todayNext() {
-        $(".today_content_left").stop().animate({ marginLeft: -650 }, 800, function () {
-            $(".today_content_left .left_inner:first").appendTo(".today_content_left");
-            $(".today_content_left").css({ marginLeft: 0 });
+        $("#left_one").stop().animate({ marginLeft: -600 }, 800, function () {
+            $("#left_one .content_box:first").appendTo("#left_one");
+            $("#left_one").css({ marginLeft: 0 });
         });
     }
 
-    // 버튼 슬라이드
-    $(".prevbutton").click(function () {
+    // 버튼 슬라이드 -1
+    $("#prev_1").click(function () {
         todayPrev();
     });
 
-    $(".nextbutton").click(function () {
+    $("#next_1").click(function () {
         todayNext();
     });
 
 });
 
-//오늘의 선택 슬라이드(오른쪽)
+//오늘의 선택 슬라이드(오른쪽) -1
 $(document).ready(function () {
     function todayPrev2() {
-        $(".today_content_right .content_box:last").prependTo(".today_content_right ");
-        $(".today_content_right").css("margin-left", -152);
-        $(".today_content_right").stop().animate({ marginLeft: 0 }, 800);
+        $("#right_one .content_box:last").prependTo("#right_one");
+        $("#right_one").css("margin-left", -152);
+        $("#right_one").stop().animate({ marginLeft: 0 }, 800);
     }
 
     function todayNext2() {
-        $(".today_content_right").stop().animate({ marginLeft: -152 }, 800, function () {
-            $(".today_content_right .content_box:first").appendTo(".today_content_right");
-            $(".today_content_right ").css({ marginLeft: 0 });
+        $("#right_one").stop().animate({ marginLeft: -152 }, 800, function () {
+            $("#right_one .content_box:first").appendTo("#right_one");
+            $("#right_one").css({ marginLeft: 0 });
         });
     }
 
-    // 버튼 슬라이드
-    $(".prevbutton").click(function () {
+    // 버튼 슬라이드 -1
+    $("#prev_1").click(function () {
         todayPrev2();
     });
 
-    $(".nextbutton").click(function () {
+    $("#next_1").click(function () {
         todayNext2();
     });
 
 });
 
-// //오늘의 선택 리스트 변경
-// $('.bs_headline li').click(function () {
-//     let i = $(this).index();
-//     $('.list').eq(i).show().css('display', 'flex').siblings('.list').hide();
-// });
+//오늘의 선택 슬라이드(왼쪽) -2
+$(document).ready(function () {
+    function todayPrev4() {
+        $("#left_two .content_box:last").prependTo("#left_two");
+        $("#left_two").css("margin-left", -600);
+        $("#left_two").stop().animate({ marginLeft: 0 }, 800);
+    }
 
-// $('.bs_headline li:first').css('color', 'black');
-// $('.bs_headline li').click(function () {
-//     $('li').css('color', '');
-//     $(this).css('color', 'black');
-// });
+    function todayNext4() {
+        $("#left_two").stop().animate({ marginLeft: -600 }, 800, function () {
+            $("#left_two .content_box:first").appendTo("#left_two");
+            $("#left_two").css({ marginLeft: 0 });
+        });
+    }
 
+    // 버튼 슬라이드 -2
+    $("#prev_2").click(function () {
+        todayPrev4();
+    });
+
+    $("#next_2").click(function () {
+        todayNext4();
+    });
+
+});
+
+//오늘의 선택 슬라이드(오른쪽) -2
+$(document).ready(function () {
+    function todayPrev3() {
+        $("#right_two .content_box:last").prependTo("#right_two");
+        $("#right_two").css("margin-left", -152);
+        $("#right_two").stop().animate({ marginLeft: 0 }, 800);
+    }
+
+    function todayNext3() {
+        $("#right_two").stop().animate({ marginLeft: -152 }, 800, function () {
+            $("#right_two .content_box:first").appendTo("#right_two");
+            $("#right_two").css({ marginLeft: 0 });
+        });
+    }
+
+    // 버튼 슬라이드 -2
+    $("#prev_2").click(function () {
+        todayPrev3();
+    });
+
+    $("#next_2").click(function () {
+        todayNext3();
+    });
+
+});
+
+//오늘의 선택 슬라이드(왼쪽) -3
+$(document).ready(function () {
+    function todayPrev5() {
+        $("#left_three .content_box:last").prependTo("#left_three");
+        $("#left_three").css("margin-left", -600);
+        $("#left_three").stop().animate({ marginLeft: 0 }, 800);
+    }
+
+    function todayNext5() {
+        $("#left_three").stop().animate({ marginLeft: -600 }, 800, function () {
+            $("#left_three .content_box:first").appendTo("#left_three");
+            $("#left_three").css({ marginLeft: 0 });
+        });
+    }
+
+    // 버튼 슬라이드 -3
+    $("#prev_3").click(function () {
+        todayPrev5();
+    });
+
+    $("#next_3").click(function () {
+        todayNext5();
+    });
+
+});
+
+//오늘의 선택 슬라이드(오른쪽) -3
+$(document).ready(function () {
+    function todayPrev6() {
+        $("#right_three .content_box:last").prependTo("#right_three");
+        $("#right_three").css("margin-left", -152);
+        $("#right_three").stop().animate({ marginLeft: 0 }, 800);
+    }
+
+    function todayNext6() {
+        $("#right_three").stop().animate({ marginLeft: -152 }, 800, function () {
+            $("#right_three .content_box:first").appendTo("#right_three");
+            $("#right_three").css({ marginLeft: 0 });
+        });
+    }
+
+    // 버튼 슬라이드 -3
+    $("#prev_3").click(function () {
+        todayPrev6();
+    });
+
+    $("#next_3").click(function () {
+        todayNext6();
+    });
+
+});
 
 //급상승 슬라이드
 $(document).ready(function () {
@@ -96,11 +187,11 @@ $(document).ready(function () {
     }
 
     // 버튼 슬라이드
-    $(".prevbutton").click(function () {
+    $("#prev_4").click(function () {
         prev();
     });
 
-    $(".nextbutton").click(function () {
+    $("#next_4").click(function () {
         next();
     });
 
@@ -122,11 +213,11 @@ $(document).ready(function () {
     }
 
     // 버튼 슬라이드
-    $(".prevbutton").click(function () {
+    $("#prev_5").click(function () {
         originPrev();
     });
 
-    $(".nextbutton").click(function () {
+    $("#next_5").click(function () {
         originNext();
     });
 
@@ -141,6 +232,45 @@ $(document).ready(function () {
         });
     }
     setInterval(slide, 4000)
+});
+
+//casting 슬라이드
+$(document).ready(function () {
+    let i = 0;
+    const slideCount = $(".casting_inner").length;
+
+    function slide(i) {
+        $("#casting_wrap .casting_inner").eq(i - 1).stop().fadeOut();
+        $("#casting_wrap .casting_inner").eq(i).stop().fadeIn('slow');
+        // $("#casting_wrap").eq(i).css("background","url(./img/fhc0ymth.jpg)");
+    }
+
+    function nextSlide() {
+        i++;
+        if (i >= slideCount) {
+            i = 0;
+        }
+        slide(i);
+        console.log(i)
+    }
+
+    function prevSlide() {
+        i--;
+        if (i < 0) {
+            i = slideCount - 1;
+        }
+        slide(i);
+        console.log(i)
+    }
+
+    $(".next_control").click(function () {
+        nextSlide();
+    });
+
+    $(".prev_control").click(function () {
+        prevSlide();
+    });
+
 });
 
 //히트 버튼 슬라이드

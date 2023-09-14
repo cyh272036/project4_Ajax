@@ -14,6 +14,7 @@
     width: 100%;
     height: auto;
     position: relative;
+    margin-bottom: 100px;
 
     .welcome {
         width: 100%;
@@ -147,10 +148,9 @@
 //오늘의 추천책(section)
 #today_wrap {
     width: 1200px;
-    height: 500px;
+    height: auto;
     position: relative;
     margin: 0 auto;
-    background-color: forestgreen;
 
     margin: {
         top: 70px;
@@ -159,10 +159,9 @@
 
     .today_title {
         width: 100%;
-        height: 70px;
+        height: 40px;
         display: flex;
         align-items: center;
-        background-color: papayawhip;
         position: relative;
 
         h1 {
@@ -174,6 +173,7 @@
             width: 40%;
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
 
             li:hover {
                 text-decoration: underline;
@@ -203,44 +203,44 @@
         }
     }
 
-        .prevbutton {
-            width: 44px;
-            height: 44px;
-            position: absolute;
-            left: -70px;
-            top: 50%;
-            border: 1px solid #ccc;
-            border-radius: 30px;
-            transform: scaleX(-1);
-            cursor: pointer;
+    .prevbutton {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        left: -70px;
+        top: 50%;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        transform: scaleX(-1);
+        cursor: pointer;
 
-            background: {
-                image: url(../img/btn_swiper_arr@2x.png);
-                repeat: no-repeat;
-                size: cover;
-                position: center;
-                color: #fff;
-            }
+        background: {
+            image: url(../img/btn_swiper_arr@2x.png);
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+            color: #fff;
         }
+    }
 
-        .nextbutton {
-            width: 44px;
-            height: 44px;
-            position: absolute;
-            right: -70px;
-            top: 50%;
-            border: 1px solid #ccc;
-            border-radius: 30px;
-            cursor: pointer;
+    .nextbutton {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        right: -70px;
+        top: 50%;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        cursor: pointer;
 
-            background: {
-                image: url(../img/btn_swiper_arr@2x.png);
-                repeat: no-repeat;
-                size: cover;
-                position: center;
-                color: #fff;
-            }
+        background: {
+            image: url(../img/btn_swiper_arr@2x.png);
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+            color: #fff;
         }
+    }
 
     .today_content {
         position: relative;
@@ -248,45 +248,54 @@
         height: 370px;
         justify-content: space-between;
         align-items: center;
-        background-color: indigo;
         margin-top: 30px;
         top: 0;
         left: 0;
 
-        .today_content_right_wrap {
-            width: 444px;
+        .today_content_left_wrap {
+            width: 600px;
+            height: 300px;
             position: absolute;
+            top: 10%;
             overflow: hidden;
-            right: 0;
-            top: 16%;
-            height: auto;
-            background-color: saddlebrown;
 
-            .today_content_right {
-                position: relative;
-                left: -152px;
-                width: 900px;
+            .today_content_left {
+                width: 3600px;
                 height: 100%;
-                display: flex;
-                justify-content: space-between;
-                background-color: rgb(193, 245, 179);
 
                 .content_box {
-                    width: 140px;
+                    width: 600px;
                     height: auto;
-                    background-color: darkorange;
+                    float: left;
 
                     img {
-                        width: 100%;
+                        height: 300px;
+                        float: left;
+                        margin-right: 30px;
+                        box-shadow: 4px 4px 4px #929292;
                     }
 
                     h3 {
-                        font-size: 15px;
-                        margin-bottom: 3px;
+                        font-size: 20px;
+                        margin-top: 30px;
                     }
 
                     p {
-                        font-size: 12px;
+                        width: 90%;
+                        font-size: 16px;
+                    }
+
+                    .author {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+
+                    .per {
+                        color: #2b760d;
+                    }
+
+                    .text {
+                        margin-top: 10px;
                     }
                 }
             }
@@ -299,7 +308,6 @@
             right: 0;
             top: 16%;
             height: auto;
-            background-color: saddlebrown;
 
             .today_content_right {
                 position: relative;
@@ -308,15 +316,14 @@
                 height: 100%;
                 display: flex;
                 justify-content: space-between;
-                background-color: rgb(193, 245, 179);
 
                 .content_box {
                     width: 140px;
                     height: auto;
-                    background-color: darkorange;
 
                     img {
                         width: 100%;
+                        border: 1px solid #eaeaea;
                     }
 
                     h3 {
@@ -332,9 +339,19 @@
         }
     }
 
+    .all {
+        display: block;
+    }
+
+    .domestic {
+        display: none;
+    }
+
+    .globel {
+        display: none;
+    }
+
 }
-
-
 
 //중간 광고(section)
 #advert {
@@ -893,142 +910,164 @@
 }
 
 //casting
-#casting_wrap {
+
+.casting_big_wrap {
+
     width: 100%;
-    height: 470px;
-    margin-bottom: 200px;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
 
-    background: {
-        image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/fhc0ymth.jpg);
-        repeat: no-repeat;
-        size: cover;
-        position: center;
-    }
+    #casting_wrap {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 200px;
+        background-color: saddlebrown;
 
-    .casting_inner {
-        width: 1200px;
-        height: 80%;
-        margin: 0 auto;
-        position: relative;
-        padding-top: 50px;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
 
-        .casting_inner_headline {
-            width: 100%;
-            height: 75px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .casting_inner {
+            width: 1200px;
+            height: 80%;
+            margin: 0 auto;
+            position: relative;
+            padding-top: 50px;
 
-            img {
-                height: 60px;
-            }
-
-            .more {
-                width: 80px;
+            .casting_inner_headline {
+                width: 100%;
+                height: 75px;
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-                justify-content: flex-end;
-                cursor: pointer;
-                color: white;
 
                 img {
-                    width: 10px;
-                    height: 10px;
-                    margin-left: 10px;
-                }
-            }
-        }
-
-        .casting_inner_content {
-            width: 30%;
-            height: auto;
-            position: absolute;
-            bottom: -50px;
-
-            .casting_content_text {
-                height: 250px;
-                color: white;
-
-                h3 {
-                    font-size: 25px;
-                    margin-bottom: 15px;
+                    height: 60px;
                 }
 
-                p {
-                    font-size: 16px;
-                    margin-bottom: 70px;
-
-                    span {
-                        color: #bdbdbd;
-                    }
-                }
-
-                .casting_control {
-                    height: auto;
+                .more {
+                    width: 80px;
                     display: flex;
-                    align-items: flex-end;
+                    align-items: center;
+                    justify-content: flex-end;
+                    cursor: pointer;
+                    color: white;
 
-                    .prev_control {
-                        width: 55px;
-                        height: 55px;
-                        transform: scaleX(-1);
-                        border: 1px solid #eaeaea;
-                        border-radius: 50px;
-                        cursor: pointer;
+                    img {
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 10px;
+                    }
+                }
+            }
 
-                        img {
-                            width: 100%;
+            .casting_inner_content {
+                width: 30%;
+                height: auto;
+                position: absolute;
+                bottom: -50px;
+
+                .casting_content_text {
+                    height: 250px;
+                    color: white;
+
+                    h3 {
+                        font-size: 25px;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 70px;
+
+                        span {
+                            color: #bdbdbd;
                         }
                     }
 
-                    .next_control {
-                        width: 55px;
-                        height: 55px;
-                        border: 1px solid #eaeaea;
-                        border-radius: 50px;
-                        margin-left: 20px;
-                        cursor: pointer;
+                    .casting_control {
+                        height: auto;
+                        display: flex;
+                        align-items: flex-end;
 
-                        img {
-                            width: 100%;
+                        .prev_control {
+                            width: 55px;
+                            height: 55px;
+                            transform: scaleX(-1);
+                            border: 1px solid #eaeaea;
+                            border-radius: 50px;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .next_control {
+                            width: 55px;
+                            height: 55px;
+                            border: 1px solid #eaeaea;
+                            border-radius: 50px;
+                            margin-left: 20px;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        .casting_inner_thumb {
-            position: absolute;
-            right: 0;
-            width: 680px;
-            height: 400px;
-            border-radius: 20px;
-
-            background: {
-                image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/fhc0ymth.jpg);
-                repeat: no-repeat;
-                size: cover;
-                position: center;
-            }
-
-            .video_icon {
-                width: 80px;
-                height: 80px;
+            .casting_inner_thumb {
                 position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
+                right: 0;
+                width: 680px;
+                height: 400px;
+                border-radius: 20px;
 
                 background: {
-                    image: url(../img/ico_video_play_w70@2x.png);
                     repeat: no-repeat;
                     size: cover;
                     position: center;
                 }
+
+                .video_icon {
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+
+                    background: {
+                        image: url(../img/ico_video_play_w70@2x.png);
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center;
+                    }
+                }
             }
         }
     }
+
+    .casting_one{
+        display: block;
+    }
+
+    .casting_two{
+        display: none;
+    }
+
+    .casting_three{
+        display: none;
+    }
 }
+
 
 //교보 오리지널
 #origin {
