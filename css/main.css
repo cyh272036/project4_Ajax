@@ -544,63 +544,37 @@ body {
   height: 370px;
   justify-content: space-between;
   align-items: center;
-  background-color: indigo;
   margin-top: 30px;
   top: 0;
   left: 0;
 }
 #today_wrap .today_content .today_content_left_wrap {
-  width: 650px;
+  width: 600px;
+  height: 900px;
   height: auto;
-  overflow: hidden;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  top: 9%;
+  background-color: rgb(255, 244, 235);
 }
 #today_wrap .today_content .today_content_left_wrap .today_content_left {
-  width: 3900px;
-  height: 300px;
-  align-items: center;
-  background-color: darkgray;
-}
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner {
-  width: 650px;
-  height: 300px;
-  position: relative;
-  background-color: salmon;
-  float: left;
-}
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner .content_box {
-  position: absolute;
-  width: auto;
+  width: 900px;
   height: 100%;
-  left: 0;
-  background-color: sandybrown;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(193, 245, 179);
 }
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner .content_box img {
-  height: 100%;
+#today_wrap .today_content .today_content_left_wrap .today_content_left .content_box {
+  width: 140px;
+  height: auto;
+  background-color: darkorange;
 }
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner .content_text {
-  width: 396px;
-  height: 220px;
-  background-color: palegoldenrod;
-  margin-left: 50px;
-  position: absolute;
-  left: 28%;
-  top: 12%;
+#today_wrap .today_content .today_content_left_wrap .today_content_left .content_box img {
+  width: 100%;
 }
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner .content_text a {
-  font-size: 25px;
-  margin-bottom: 15px;
-  word-break: keep-all;
+#today_wrap .today_content .today_content_left_wrap .today_content_left .content_box h3 {
+  font-size: 15px;
+  margin-bottom: 3px;
 }
-#today_wrap .today_content .today_content_left_wrap .today_content_left .left_inner .content_text p {
-  width: 90%;
-  font-size: 16px;
-  margin-bottom: 5px;
-  word-break: keep-all;
+#today_wrap .today_content .today_content_left_wrap .today_content_left .content_box p {
+  font-size: 12px;
 }
 #today_wrap .today_content .today_content_right_wrap {
   width: 444px;

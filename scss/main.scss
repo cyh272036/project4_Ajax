@@ -248,71 +248,48 @@
         height: 370px;
         justify-content: space-between;
         align-items: center;
-        background-color: indigo;
+        // background-color: indigo;
         margin-top: 30px;
         top: 0;
         left: 0;
 
         .today_content_left_wrap {
-            width: 650px;
+            width: 600px;
+            height: 900px;
+            // position: absolute;
+            // overflow: hidden;
+            // left: 0;
+            // top: 16%;
             height: auto;
-            overflow: hidden;
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            left: 0;
-            top: 9%;
+            background-color: rgb(255, 244, 235);
 
             .today_content_left {
-                width: 3900px;
-                height: 300px;
-                align-items: center;
-                background-color: darkgray;
+                // position: relative;
+                // left: -152px;
+                width: 900px;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(193, 245, 179);
 
-                .left_inner {
-                    width: 650px;
-                    height: 300px;
-                    position: relative;
-                    background-color: salmon;
-                    float: left;
+                .content_box {
+                    width: 140px;
+                    height: auto;
+                    background-color: darkorange;
 
-                    .content_box {
-                        position: absolute;
-                        width: auto;
-                        height: 100%;
-                        left: 0;
-                        background-color: sandybrown;
-
-                        img {
-                            height: 100%;
-                        }
+                    img {
+                        width: 100%;
                     }
 
-                    .content_text {
-                        width: 396px;
-                        height: 220px;
-                        background-color: palegoldenrod;
-                        margin-left: 50px;
-                        position: absolute;
-                        left: 28%;
-                        top: 12%;
+                    h3 {
+                        font-size: 15px;
+                        margin-bottom: 3px;
+                    }
 
-                        a {
-                            font-size: 25px;
-                            margin-bottom: 15px;
-                            word-break: keep-all;
-                        }
-
-                        p {
-                            width: 90%;
-                            font-size: 16px;
-                            margin-bottom: 5px;
-                            word-break: keep-all;
-                        }
-
+                    p {
+                        font-size: 12px;
                     }
                 }
-
             }
         }
 
