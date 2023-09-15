@@ -1,79 +1,60 @@
 //광고 슬라이드
-var a = 0;
-function slider() {
-    a++;
-    if (a > $('.slide_move:last').index()) {
-        a = 0;
+
+$(document).ready(function () {
+    let i = 0;
+    const adCount = $(".slide_move").length;
+
+    function slider() {
+        i++;
+        if (i > $('.slide_move:last').index()) {
+            i = 0;
+        }
+        $('.slide_move').eq(i - 1).stop().fadeOut(700);
+        $('.slide_move').eq(i).stop().fadeIn(1000);
+        $('.welcome_control_list li').eq(i).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
+
+        $(".prev_12").click(function () {
+            $('.slide_move').eq(i - 1).stop().fadeOut(700);
+        });
+
+        $(".next_12").click(function () {
+            $('.slide_move').eq(i + 1).stop().fadeOut(700);
+        });
+    };
+    setInterval(slider, 4000);
+
+    function adslide(i) {
+        $(".welcome_inner .slide_move").eq(i).stop().fadeIn('slow');
+        $(".welcome_inner .slide_move").not(":eq(" + i + ")").stop().fadeOut('fast');
+        $('.welcome_control_list li').eq(i).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
     }
-    $('.slide_move').eq(a - 1).stop().fadeOut(700);
-    $('.slide_move').eq(a).stop().fadeIn(1000);
-    $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
 
-    $(".prev").click(function () {
-        $('.slide_move').eq(a - 1).stop().fadeOut(700);
+    function adNextSlide() {
+        i++;
+        if (i >= adCount) {
+            i = 0;
+        }
+        adslide(i);
+        console.log(i)
+    }
+
+    function adPrevSlide() {
+        i--;
+        if (i < 0) {
+            i = adCount - 1;
+        }
+        adslide(i);
+        console.log(i)
+    }
+
+    $(".next_12").click(function () {
+        adNextSlide();
     });
 
-    $(".next").click(function () {
-        $('.slide_move').eq(a + 1).stop().fadeOut(700);
+    $(".prev_12").click(function () {
+        adPrevSlide();
     });
-};
-setInterval(slider, 4000);
-
-// 광고 양쪽 버튼
-// $(document).ready(function () {
-//     let i = 0;
-//     const adCount = $(".slide_move").length;
-
-//     function adSlide(i) {
-//         $(".welcome_inner .slide_move").eq(i).stop().fadeIn('slow');
-//         $(".welcome_inner .slide_move").not(":eq(" + i + ")").stop().fadeOut('fast');
-//         $('.welcome_control_list li').eq(i).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-//     }
-
-//     function nextSlide() {
-//         i++;
-//         if (i >= adCount) {
-//             i = 0;
-//         }
-//         adSlide(i);
-//         console.log(i)
-//     }
-
-//     function prevSlide() {
-//         i--;
-//         if (i < 0) {
-//             i = adCount - 1;
-//         }
-//         adSlide(i);
-//         console.log(i)
-//     }
-
-//     $(".next").click(function () {
-//         nextSlide();
-//     });
-
-//     $(".prev").click(function () {
-//         prevSlide();
-//     });
-
-//     setInterval(adSlide, 4000);
-
-// });
-
-
-//네비
-$('.welcome_control_list3 .prev').click(function () {
-    a--;
-    $('.slide .slide_move').eq(a).stop().fadeIn(1000).siblings().fadeOut(700);
-    $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-})
-
-$('.welcome_control_list3 .next').click(function () {
-    a++;
-    $('.slide .slide_move').eq(a).stop().fadeIn(1000).siblings().fadeOut(700);
-    $('.welcome_control_list li').eq(a).css({ 'font-weight': 'bold', 'border-bottom': '2px solid black' }).siblings().css({ 'font-weight': 'normal', 'border-bottom': 'none' });
-})
-
+});
 
 //오늘의 선택 슬라이드(왼쪽) - 1
 $(document).ready(function () {
@@ -455,11 +436,11 @@ $(document).ready(function () {
     }
 
     // 버튼 슬라이드
-    $("#prev_4").click(function () {
+    $("#prev_11").click(function () {
         prev();
     });
 
-    $("#next_4").click(function () {
+    $("#next_11").click(function () {
         next();
     });
 
@@ -481,14 +462,13 @@ $(document).ready(function () {
     }
 
     // 버튼 슬라이드
-    $("#prev_5").click(function () {
+    $("#prev_10").click(function () {
         originPrev();
     });
 
-    $("#next_5").click(function () {
+    $("#next_10").click(function () {
         originNext();
     });
-
 });
 
 //big wide 광고 슬라이드
@@ -563,11 +543,11 @@ $(document).ready(function () {
     }
 
     // 버튼 슬라이드
-    $(".prev_control").click(function () {
+    $("#prev_9").click(function () {
         hitPrev();
     });
 
-    $(".next_control").click(function () {
+    $("#next_9").click(function () {
         hitNext();
     });
 
@@ -601,8 +581,5 @@ $(document).ready(function () {
         const walk = x - startX;
         slider.scrollLeft = scrollLeft - walk;
     });
-
-    //casting
-
 
 });
