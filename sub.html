@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이방인</title>
+    <link rel="stylesheet" href="css/sub.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/sub.js"></script>
+    <script src="js/sub_Ajax.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <div id="header">
+                <div class="header_inner_top"></div>
+                <div class="header_inner">
+                    <div class="header_inner_middle">
+                        <div class="middle_wrap">
+                            <a href="">
+                                <div class="logo"></div>
+                            </a>
+                            <div class="inputbox">
+                                <input type="text" placeholder="search...">
+                                <a href="">
+                                    <div class="search"></div>
+                                </a>
+                            </div>
+                            <div class="iconbox">
+                                <a href=""><img src="img/btn_header_cart.png" alt="cart"></a>
+                                <a href=""><img src="img/btn_header_my.png" alt="my" class="my"></a>
+                            </div>
+                        </div>
+                        <div class="customer_box">
+                            <ul class="customer_list">
+                                <li><a href="">회원가입</a></li>
+                                <li>&#124;</li>
+                                <li><a href="">로그인</a></li>
+                                <li>&#124;</li>
+                                <li><a href="">회원혜택</a></li>
+                                <li>&#124;</li>
+                                <li><a href="">고객센터</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header_inner_bottom">
+                        <div class="nav_wrap">
+                            <a href="">
+                                <div class="small_menu"></div>
+                            </a>
+                            <div class="nav_list">
+                                <ul class="nav_list_item">
+                                    <li><a href="">베스트</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">신상품</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">이벤트</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">사은품</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">PICKS</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">CASTING</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">교보ONLY</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav_list_sub">
+                                <ul class="nav_list_item">
+                                    <li><a href="">할인혜택</a></li>
+                                    <li>&#183;</li>
+                                    <li><a href="">출석체크</a></li>
+                                    <li class="add_img"></li>
+                                    <li>&#47;</li>
+                                </ul>
+                                <div class="nav_list_item_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- intro 책 구매 -->
+        <article>
+            <div id="intro">
+                <div class="intro_top">
+                    <div class="home"></div>
+                    <div class="link">
+                        국내도서
+                        <div class="click_list">
+                            <ul>
+                                <li>국내도서</li>
+                                <li>서양도서</li>
+                                <li>일본도서</li>
+                                <li>교보only</li>
+                            </ul>
+                        </div>
+                        <img src="img/ico_breadcrumb_more@2x.png" alt="click" class="click">
+                        <p>&#47;</p>
+                    </div>
+                    <div class="link">
+                        소설
+                        <div class="click_list two">
+                            <div class="list_box">
+                                <ul>
+                                    <li>소설</li>
+                                    <li>시/에세이</li>
+                                    <li>인문</li>
+                                    <li>가정/육아</li>
+                                    <li>요리</li>
+                                    <li>건강</li>
+                                    <li>취미/실용/스포츠</li>
+                                    <li>경제/경영</li>
+                                    <li>자기계발</li>
+                                    <li>정치/사회</li>
+                                </ul>
+                            </div>
+                            <div class="list_box">
+                                <ul>
+                                    <li>역사/문화</li>
+                                    <li>종교</li>
+                                    <li>예술/대중문화</li>
+                                    <li>중/고등참고서</li>
+                                    <li>기술/공학</li>
+                                    <li>외국어</li>
+                                    <li>과학</li>
+                                    <li>취업/수험서</li>
+                                    <li>여행</li>
+                                    <li>컴퓨터/IT</li>
+                                </ul>
+                            </div>
+                            <div class="list_box">
+                                <ul>
+                                    <li>잡지</li>
+                                    <li>청소년</li>
+                                    <li>초등참고서</li>
+                                    <li>유아(0~7세)</li>
+                                    <li>어린이(초등)</li>
+                                    <li>만화</li>
+                                    <li>대학교재</li>
+                                    <li>한국소개도서</li>
+                                    <li>교보오리지널</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="img/ico_breadcrumb_more@2x.png" alt="click" class="click2">
+                        <p>&#47;</p>
+                    </div>
+                    <div class="link">
+                        프랑스 소설
+                        <div class="click_list three">
+                            <div class="list_box">
+                                <ul>
+                                    <li>한국소설</li>
+                                    <li>영미소설</li>
+                                    <li>일본소설</li>
+                                    <li>중국소설</li>
+                                    <li>러시아소설</li>
+                                    <li>프랑스소설</li>
+                                    <li>독일소설</li>
+                                    <li>북유럽소설</li>
+                                    <li>그외유럽소설</li>
+                                    <li>기타나라소설</li>
+                                </ul>
+                            </div>
+                            <div class="list_box">
+                                <ul>
+                                    <li>고전소설/문학선</li>
+                                    <li>세계문학전집</li>
+                                    <li>라이트노벨</li>
+                                    <li>장르소설</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="img/ico_breadcrumb_more@2x.png" alt="click" class="click3">
+                        <p>&#47;</p>
+                    </div>
+                    <div class="link">
+                        고전소설/문학선
+                        <div class="click_list four">
+                            <ul>
+                                <li>프랑스소설일반</li>
+                                <li>고전소설/문학선</li>
+                                <li>역사소설</li>
+                                <li>SF/과학소설</li>
+                                <li>판타지소설</li>
+                                <li>공포/호러소설</li>
+                                <li>미스터리/스릴러소설</li>
+                                <li>로맨스소설</li>
+                                <li>청소년소설</li>
+                                <li>드라마/영화소설</li>
+                            </ul>
+                        </div>
+                        <img src="img/ico_breadcrumb_more@2x.png" alt="click" class="click4">
+                    </div>
+                </div>
+                <div class="intro_inner">
+                    <div class="intro_left">
+                        <p>원전으로 읽은 움라우트 세계문학</p>
+                        <h5>알베르 카뮈 저자(글) &#183; 이정서 번역</h5>
+                        <p class="from">새움 &#183; 2022년 02월 10일</p>
+                        <div class="best">
+                            <div class="crown"></div>
+                            <p>주간베스트 소설 <span>374</span>위</p>
+                        </div>
+                    </div>
+                    <div class="intro_center">
+                        <h1>이방인</h1>
+                        <div class="arrbox">
+                            <div class="prev_1"><img src="img/btn_swiper_arr@2x.png" alt="arrow_left"></div>
+                            <div class="next_1"><img src="img/btn_swiper_arr@2x.png" alt="arrow_right"></div>
+                        </div>
+                        <div class="book_slide">
+                            <div class="book_slide_inner">
+                                <img src="img/book.jpg" alt="book_main">
+                                <img src="img/book2.jpg" alt="book_size">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro_right">
+                        <div class="right_inner_event">
+                            <div class="popevent">
+                            <p>이벤트</p><p>소득공제</p>                                
+                            </div>
+                            <h3><span>10%</span> 7,200원 <span class="deliteline">8000원</span></h3>
+                        </div>
+                        <div class="right_inner">
+                            <h3>적립/혜택</h3>
+                            <h3 class="point">400P</h3>
+                        </div>
+                        <div class="right_inner">
+                            <div class="left_side">
+                                <h3>배송안내</h3>
+                            </div>
+                            <div class="right_side">
+                                <h4>도서 포함 15,000원 이상 무료배송</h4>
+                                <h4>내일(9/16,토) 도착예정</h4>
+                            </div>
+                        </div>
+                        <div class="right_inner">
+                            <div class="check">
+                                <p>
+                                    알림 신청하시면 원하시는 정보를<br>
+                                    받아 보실 수 있습니다.
+                                </p>
+                                <div class="bell">
+                                    <img src="img/ico_alarm_on@2x.png" alt="">
+                                    알림신청
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location">
+                            <img src="img/ico_locate@2x.png" alt="">
+                            매장별 재고 및 도서위치
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- footer -->
+        <footer>
+            <div id="footer_nonbg">
+                <div class="footer_top">
+                    <div class="footer_content">
+                        <h3>공지사항</h3>
+                        <p>교보문고 개인정보 처리방침 변경 안내(9/8)</p>
+                    </div>
+                    <div class="footer_content">
+                        <h3>이벤트</h3>
+                        <p> &#91;판타지&#93; &#91;e캐시&#93; 교보표국 2차 신입 표사 모집! 당첨자 발표</p>
+                        <div class="more">
+                            <h4>더보기</h4>
+                            <img src="img/ico_plus_h10_bold.png" alt="plus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer_bg">
+                <!-- 회원혜택 -->
+                <div class="footer_middle">
+                    <div class="footer_middle_contentbox">
+                        <div class="category">
+                            <h2>회원혜택</h2>
+                            <img src="img/arw_anb_category_all.png" alt="arw">
+                        </div>
+                        <div class="category_list">
+                            <ul>
+                                <li>Prestige Lounge</li>
+                                <li>신규회원 혜택</li>
+                                <li>등급별 혜택</li>
+                                <li>출석체크</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 쇼핑Tip -->
+                    <div class="footer_middle_contentbox">
+                        <div class="category">
+                            <h2>쇼핑 TIP</h2>
+                        </div>
+                        <div class="category_list">
+                            <ul>
+                                <li>제휴포인트/상품권</li>
+                                <li>교보문고 기프트카드</li>
+                                <li>대량구매</li>
+                                <li>리딩트리서비스(독서경영)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 빠른 서비스 -->
+                    <div class="footer_middle_contentbox">
+                        <div class="category">
+                            <h2>빠른 서비스</h2>
+                        </div>
+                        <div class="category_list">
+                            <ul>
+                                <li>북클럽카드 등록</li>
+                                <li>영수증 후 적립</li>
+                                <li>교보캐시 조회&#183;충전</li>
+                                <li>교보e캐시 조회&#183;충전</li>
+                                <li>기프트카드 조회&#183;충전</li>
+                                <li>협력사 여러분</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 교보문고 소식 -->
+                    <div class="footer_middle_contentbox">
+                        <div class="category">
+                            <h2>교보문고 소식</h2>
+                        </div>
+                        <div class="category_list">
+                            <ul>
+                                <li>인스타그램(교보문고)</li>
+                                <li>인스타그램(인터넷교보문고)</li>
+                                <li>페이스북(교보문고)</li>
+                                <li>페이스북(인터넷교보문고)</li>
+                                <li>트위터</li>
+                                <li>유튜브</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- FAQ -->
+                    <div class="footer_middle_contentbox">
+                        <div class="category">
+                            <h2>FAQ</h2>
+                            <img src="img/arw_anb_category_all.png" alt="arw">
+                        </div>
+                        <div class="category_list">
+                            <ul>
+                                <li>주문&#183;결제</li>
+                                <li>eBook</li>
+                                <li>도서&#183;상품정보</li>
+                                <li>중고장터</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer_nonbg">
+                <div class="footer_bottom">
+                    <div class="footer_bottom_top">
+                        <img src="img/img_logo_kyobo.png" alt="logo" class="footer_logo">
+                        <div class="link_icon">
+                            <img src="img/btn_footer_sns_youtube@2x.png" alt="youtube">
+                            <img src="img/btn_footer_sns_fb@2x.png" alt="facebook">
+                            <img src="img/btn_footer_sns_insta@2x.png" alt="instagram">
+                        </div>
+                    </div>
+                    <div class="footer_bottom_else">
+                        <div class="footer_bottom_else_left">
+                            <div class="else">
+                                <ul class="else_list">
+                                    <li><a href="#">회사소개</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">이용약관</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">개인정보처리방침</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">청소년보호정책</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">대량주문안내</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">협력사여러분</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">채용정보</a></li>
+                                    <li>&#124;</li>
+                                    <li><a href="#">광고소개</a></li>
+                                </ul>
+                            </div>
+                            <div class="else">
+                                <p>대표이사 : 안병현, 김상훈 &#124; 서울특별시 종로구 종로 1 &#124; 사업자등록번호 : 102-81-11670</p>
+                                <p>대표전화 : 1544-1900(발신자 부담전화) &#124; FAX : 0502-987-5711(지역번호 공통) &#124; 서울특별시 통신판매업신고번호
+                                    : 제
+                                    653호 </p>
+                            </div>
+                            <div class="else">
+                                <p class="copyright">&#169; YUNHWA CHOI & &#169; KYOBO BOOK CENTRE / 개인 포트폴리오 작업물의 일환으로
+                                    제작되었으며
+                                    모든 저작권은 교보문고에 있습니다. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
