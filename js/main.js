@@ -486,7 +486,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     let i = 0;
     const slideCount = $(".casting_inner").length;
-    let bg = ['../img/fhc0ymth.jpg', '../img/dudgewhd-720.jpg', '../img/ew8uf34d-720.jpg']
+    let bg = ['./img/fhc0ymth.jpg', './img/dudgewhd-720.jpg', './img/ew8uf34d-720.jpg']
 
     function slide(i) {
         $("#casting_wrap .casting_inner").eq(i).stop().fadeIn('slow');
