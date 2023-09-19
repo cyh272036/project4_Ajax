@@ -146,3 +146,35 @@ $(document).ready(function () {
 
     animate();
 });
+
+//펼치기 접기
+$(document).ready(function () {
+    $(".infor_show").click(function () {
+        var infoText = $(this).find("span");
+        var infoImg = $(this).find(".arrow_box")
+        var textBox = $(this).closest(".textbox").find(".textbox_plus");
+
+        if (textBox.is(":visible")) {
+            textBox.hide();
+            infoText.text("펼치기");
+            infoImg.css({ 'transform': 'rotate(0deg)' })
+        } else {
+            textBox.show();
+            infoText.text("접기");
+            infoImg.css({ 'transform': 'rotate(180deg)' })
+        }
+    });
+});
+
+//인물정보 텍스트 추가 불러오기 (.textbox_plus)
+$(function () {
+    $.get("./author_text", function (data) {
+        $("#one").html(data);
+    })
+});
+
+$(function () {
+    $.get("./changer_text", function (data) {
+        $("#two").html(data);
+    })
+});
