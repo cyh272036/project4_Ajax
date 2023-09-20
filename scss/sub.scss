@@ -847,7 +847,7 @@
             padding-top: 50px;
             padding-left: 30px;
             margin-top: 10px;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
 
             h3 {
                 font-size: 20px;
@@ -991,6 +991,85 @@
             }
         }
 
+        #index{
+            margin-top: 100px;
+            margin-bottom: 50px;
+
+            h3{
+                margin-bottom: 20px;
+            }
+
+            p{
+                line-height: 15px;
+                color: #252525;
+            }
+        }
+
+        #index_two{
+            width: 95%;
+            height: auto;
+
+            .textbox {
+                width: 100%;
+
+                p{
+                    word-break: keep-all;
+                }
+
+                .infor_show {
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 0;
+                    width: 20%;
+                    border: none;
+                    cursor: pointer;
+                    margin-bottom: 30px;
+
+                    span {
+                        margin-right: 5px;
+                        text-decoration: underline;
+                    }
+
+                    img {
+                        width: 15px;
+                        height: 15px;
+                        margin-top: 3px;
+                    }
+                }
+
+                .textbox_plus {
+                    display: none;
+                    width: 95%;
+                    word-break: keep-all;
+                }
+            }
+
+            #three{
+                word-break: keep-all;
+            }
+        }
+
+        .infomation{
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #767676;
+            margin-bottom: 50px;
+
+            h3{
+                margin-bottom: 10px;
+                border-bottom: 1px solid #525252;
+                padding-bottom: 20px;
+                margin-top: 50px;
+            }
+
+            table{
+                width: 80%;
+                height: 350px;
+                text-align: left;
+                padding-bottom: 20px;
+            }
+        }
 
 
     }

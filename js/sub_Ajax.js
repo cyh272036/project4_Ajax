@@ -115,7 +115,7 @@ $(document).ready(function () {
                 $('#list_d >.box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
             });
 
-        //베스트, 스테디 페이지 변경
+        //페이지 변경
         $('.pick_title_list li').click(function () {
             let i = $(this).index();
             $('.list').eq(i).show().css('display', 'flex').siblings('.list').hide();
@@ -146,20 +146,32 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
                 console.log(steady)
-                $('.author_content >.content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
+                $('#author_content_one >.content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
             });
 
-        //베스트, 스테디 페이지 변경
-        $('.pick_title_list li').click(function () {
-            let i = $(this).index();
-            $('.list').eq(i).show().css('display', 'flex').siblings('.list').hide();
-        });
+    }
 
-        $('.pick_title_list li:first').css({ 'color': '#fff', 'backgroundColor': "#595959" });
-        $('.pick_title_list li').click(function () {
-            $('li').css({ 'color': 'black', 'backgroundColor': "#f7f7f7" });
-            $(this).css({ 'color': '#fff', 'backgroundColor': "#595959" });
-        });
+    var change;
+    change = ["투명인간", "킬리만자로의 눈", "어린 왕자", '동물농장', '위대한 개츠비', '노인과 바다', '1984' , '헤밍웨이'];
+    for (i = 0; i < change.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: change[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+                console.log(steady)
+                $('#author_content_two >.content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
+            });
+
     }
 
 });

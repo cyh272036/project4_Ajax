@@ -166,7 +166,7 @@ $(document).ready(function () {
     });
 });
 
-//인물정보 텍스트 추가 불러오기 (.textbox_plus)
+//텍스트 추가 불러오기 
 $(function () {
     $.get("./author_text", function (data) {
         $("#one").html(data);
@@ -176,5 +176,17 @@ $(function () {
 $(function () {
     $.get("./changer_text", function (data) {
         $("#two").html(data);
+    })
+});
+
+$(function () {
+    $.get("./into_book_text", function (data) {
+        $("#three").html(data);
+    })
+});
+
+$(function () {
+    $.get("./pub_text", function (data) {
+        $("#four").html(data);
     })
 });
