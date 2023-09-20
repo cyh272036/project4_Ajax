@@ -123,7 +123,7 @@ $(document).ready(function () {
 
         $('.pick_title_list li:first').css({ 'color': '#fff', 'backgroundColor': "#595959" });
         $('.pick_title_list li').click(function () {
-            $('li').css({ 'color': 'black', 'backgroundColor': "#f7f7f7" });
+            $('.pick_title_list li').css({ 'color': 'black', 'backgroundColor': "#f7f7f7" });
             $(this).css({ 'color': '#fff', 'backgroundColor': "#595959" });
         });
     }

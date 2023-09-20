@@ -168,25 +168,25 @@ $(document).ready(function () {
 
 //텍스트 추가 불러오기 
 $(function () {
-    $.get("./author_text", function (data) {
+    $.get("./text/author_text", function (data) {
         $("#one").html(data);
     })
 });
 
 $(function () {
-    $.get("./changer_text", function (data) {
+    $.get("./text/changer_text", function (data) {
         $("#two").html(data);
     })
 });
 
 $(function () {
-    $.get("./into_book_text", function (data) {
+    $.get("./text/into_book_text", function (data) {
         $("#three").html(data);
     })
 });
 
 $(function () {
-    $.get("./pub_text", function (data) {
+    $.get("./text/pub_text", function (data) {
         $("#four").html(data);
     })
 });
