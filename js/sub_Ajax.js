@@ -1,7 +1,7 @@
 //함께 구매한 책
 $(document).ready(function () {
     var all;
-    all = ["아주 희미한 빛으로도", "메리골드 마음 세탁소", "동물농장", '이방인', '노인과 바다', '데미안', '변신', '파리대왕', '위대한 개츠비', '싯다르타', '시지프 신화', '어린 왕자', '가여운 것들', '떨림과 울림', '모순'];
+    all = ['파리대왕', '시지프 신화', '노인과 바다', '데미안', '변신'];
     for (i = 0; i < all.length; i++) {
 
         $.ajax({
@@ -111,7 +111,7 @@ $(document).ready(function () {
                 let data = origin.filter((val) => {
                     return val.thumbnail != '';
                 })
-                console.log(steady)
+
                 $('#list_d >.box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
             });
 
@@ -145,7 +145,7 @@ $(document).ready(function () {
                 let data = origin.filter((val) => {
                     return val.thumbnail != '';
                 })
-                console.log(steady)
+
                 $('#author_content_one >.content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
             });
 
@@ -168,8 +168,108 @@ $(document).ready(function () {
                 let data = origin.filter((val) => {
                     return val.thumbnail != '';
                 })
-                console.log(steady)
+
                 $('#author_content_two >.content_box').eq(i).append("<img src='" + data[0].thumbnail + "'/>");
+            });
+
+    }
+
+
+    var best;
+    best = ["도시와 그 불확실한 벽", "눈에 갇힌 외딴 산장에서", "아주 희미한 빛으로도", '모순', '바다가 들리는 편의점'];
+    for (i = 0; i < best.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: best[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+
+                $("#best_one >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#best_one >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#best_one >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
+
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
+
+                $("#best_one >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $("#best_one >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
+            });
+
+    }
+
+    var lang;
+    lang = ["L'Etranger"];
+    for (i = 0; i < lang.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: lang[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+                
+                $(".lang >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[5].thumbnail + "'/>" + "</a>");
+                $(".lang >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[5].title + "</a>" + "</h3>");
+                $(".lang >.content_box").eq(i).append("<p class= author>" + data[5].authors + "</p");
+
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
+
+                $(".lang >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $(".lang >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
+            });
+
+    }
+
+    var best;
+    best = ["개미1", "밖의 삶", "바깥 일기", '닿을 수 있는 세상', '스파게티 신드롬'];
+    for (i = 0; i < best.length; i++) {
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: best[i] },
+            async: false,
+            headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+        })
+            .done(function (msg) {
+                let origin = msg.documents;
+                //썸네일이 빈 문자열인것은 제외
+                let data = origin.filter((val) => {
+                    return val.thumbnail != '';
+                })
+
+                $("#best_two >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#best_two >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#best_two >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
+
+                var pri = data[0].price;
+                var sal_pri = data[0].sale_price;
+                var total_pri = pri - sal_pri;
+                var sal = parseInt(Number(pri / total_pri))
+
+                $("#best_two >.content_box").eq(i).append("<span class=per>" + sal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '%</span> ');
+                $("#best_two >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
             });
 
     }
