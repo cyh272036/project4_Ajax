@@ -7,8 +7,11 @@
     <title>이방인</title>
     <link rel="stylesheet" href="css/sub.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/sub.js"></script>
     <script src="js/sub_Ajax.js"></script>
+    <script src="js/common.js"></script>
 
 </head>
 
@@ -20,31 +23,36 @@
                 <div class="header_inner_top"></div>
                 <div class="header_inner">
                     <div class="header_inner_middle">
-                        <div class="middle_wrap">
-                            <a href="">
-                                <div class="logo"></div>
-                            </a>
-                            <div class="inputbox">
-                                <input type="text" placeholder="니체가 사랑한 철학자의 미발표작 최초 공개!">
+                        <div class="middle_wrap_big">
+                            <div class="middle_wrap">
                                 <a href="">
-                                    <div class="search"></div>
+                                    <div class="logo"></div>
                                 </a>
+                                <div class="inputbox">
+                                    <input type="text" placeholder="니체가 사랑한 철학자의 미발표작 최초 공개!">
+                                    <a href="">
+                                        <div class="search"></div>
+                                    </a>
+                                </div>
+                                <div class="iconbox">
+                                    <a href=""><img src="img/btn_header_cart.png" alt="cart"></a>
+                                    <a href=""><img src="img/btn_header_my.png" alt="my" class="my"></a>
+                                </div>
                             </div>
-                            <div class="iconbox">
-                                <a href=""><img src="img/btn_header_cart.png" alt="cart"></a>
-                                <a href=""><img src="img/btn_header_my.png" alt="my" class="my"></a>
+
+                            <div class="customer_box_wrap">
+                                <div class="customer_box">
+                                    <ul class="customer_list">
+                                        <li><a href="">회원가입</a></li>
+                                        <li>&#124;</li>
+                                        <li><a href="">로그인</a></li>
+                                        <li>&#124;</li>
+                                        <li><a href="">회원혜택</a></li>
+                                        <li>&#124;</li>
+                                        <li><a href="">고객센터</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="customer_box">
-                            <ul class="customer_list">
-                                <li><a href="">회원가입</a></li>
-                                <li>&#124;</li>
-                                <li><a href="">로그인</a></li>
-                                <li>&#124;</li>
-                                <li><a href="">회원혜택</a></li>
-                                <li>&#124;</li>
-                                <li><a href="">고객센터</a></li>
-                            </ul>
                         </div>
                     </div>
 
@@ -313,7 +321,7 @@
 
         <!-- content -->
         <section id="event">
-            <div id="content" >
+            <div id="content">
                 <div class="content_left">
                     <!-- event -->
                     <div class="event">
@@ -470,20 +478,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="author_content_wrap">
-                            <div class="author_content" id="author_content_one">
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
+
+                        <div class="swiper mySwiper author_content_wrap">
+                            <div class="swiper-wrapper author_content" id="author_content_one">
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
                             </div>
-                        </div>
-                        <div class="slider-bar">
-                            <div class="slider-bar-fill"></div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
                     <!-- 번역가 -->
@@ -509,20 +518,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="author_content_wrap">
-                            <div class="author_content" id="author_content_two">
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
-                                <div class="content_box"></div>
+
+                        <div class="swiper mySwiper author_content_wrap">
+                            <div class="swiper-wrapper author_content" id="author_content_two">
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
+                                <div class="swiper-slide content_box"></div>
                             </div>
-                        </div>
-                        <div class="slider-bar">
-                            <div class="slider-bar-fill"></div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
                     <!-- 목차 -->
@@ -968,6 +978,40 @@
                     <!-- 오른쪽 배너3 -->
                     <div class="small_banner">
                         <img src="img/09.png" alt="small_banner">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="sell">
+                <div class="sell_inner">
+                    <div class="sell_left">
+                        <p>총 상품 금액</p>
+                        <h3>7,200<span>원</span></h3>
+                    </div>
+                    <div class="sell_right">
+                        <div class="count">
+                            <img src="img/ico_spinner_down@2x.png" alt="down">
+                            <p>1</p>
+                            <img src="img/ico_spinner_up@2x.png" alt="up">
+                        </div>
+                        <div class="heart">
+                            <img src="img/ico_heart_h20@2x.png" alt="like">
+                        </div>
+                        <div class="gift">
+                            <img src="img/ico_gift@2x.png" alt="gift">
+                            <p>선물하기</p>
+                        </div>
+                        <div class="bag">
+                            장바구니
+                        </div>
+                        <div class="bag one">
+                            바로드림
+                        </div>
+                        <div class="bag two">
+                            바로구매
+                        </div>
                     </div>
                 </div>
             </div>
