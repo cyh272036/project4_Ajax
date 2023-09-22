@@ -20,8 +20,8 @@ $(document).ready(function () {
                 })
 
 
-                $("#left_one >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_one >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_one >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_one >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_one >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -33,8 +33,8 @@ $(document).ready(function () {
                 $("#left_one >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
                 $("#left_one >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
-                $("#right_one >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_one >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_one >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_one >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_one >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -58,8 +58,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_two >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_two  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_two >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_two  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_two  >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -72,7 +72,7 @@ $(document).ready(function () {
                 $("#left_two  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
                 $("#right_two  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_two  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_two  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_two  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -95,8 +95,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_three >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_three  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_three >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_three  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_three  >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -109,7 +109,7 @@ $(document).ready(function () {
                 $("#left_three  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
                 $("#right_three  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_three  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_three  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_three  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -133,8 +133,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_four >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_four  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_four >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_four  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_four  >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -146,8 +146,8 @@ $(document).ready(function () {
                 $("#left_four  >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
                 $("#left_four  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
-                $("#right_four  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_four  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_four  >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_four  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_four  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -171,8 +171,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_five >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_five  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_five >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_five  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_five >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -184,8 +184,8 @@ $(document).ready(function () {
                 $("#left_five  >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
                 $("#left_five  >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
-                $("#right_five  >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_five  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_five  >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_five  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_five  >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -209,8 +209,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_six >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_six  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_six >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_six  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_six >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -222,8 +222,8 @@ $(document).ready(function () {
                 $("#left_six >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
                 $("#left_six >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
-                $("#right_six >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_six >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_six >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_six >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_six >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
     }
@@ -247,8 +247,8 @@ $(document).ready(function () {
                     return val.thumbnail != '';
                 })
 
-                $("#left_seven >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#left_seven  >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#left_seven >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#left_seven  >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#left_seven >.content_box").eq(i).append("<p class= author>" + data[0].authors + "</p");
 
                 var pri = data[0].price;
@@ -260,8 +260,8 @@ $(document).ready(function () {
                 $("#left_seven >.content_box").eq(i).append("<span>" + sal_pri.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원</span>');
                 $("#left_seven >.content_box").eq(i).append("<p class=text>" + data[0].contents.substring(0, 130) + "</p>");
 
-                $("#right_seven >.content_box").eq(i).append('<a href="#">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
-                $("#right_seven >.content_box").eq(i).append("<h3>" + '<a href="#">' + data[0].title + "</a>" + "</h3>");
+                $("#right_seven >.content_box").eq(i).append('<a href="./sub.html">' + "<img src='" + data[0].thumbnail + "'/>" + "</a>");
+                $("#right_seven >.content_box").eq(i).append("<h3>" + '<a href="./sub.html">' + data[0].title + "</a>" + "</h3>");
                 $("#right_seven >.content_box").eq(i).append("<p>" + data[0].authors + "</p");
             });
 
@@ -323,9 +323,9 @@ $(document).ready(function () {
             var boxs = document.getElementsByClassName('week_box');
             for (var i = 0; i < boxs.length; i++) {
 
-                $(".week_content >.week_box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                $(".week_content >.week_box").eq(i).append('<a href="./sub.html">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                 $(".week_content >.week_box").eq(i).append("<p>" + msg.documents[i].authors + "</p");
-                $(".week_content >.week_box").eq(i).append("<h3>" + '<a href="#">' + msg.documents[i].title + "</a>" + "</h3>");
+                $(".week_content >.week_box").eq(i).append("<h3>" + '<a href="./sub.html">' + msg.documents[i].title + "</a>" + "</h3>");
             }
         });
 
