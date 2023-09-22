@@ -259,7 +259,7 @@ body {
 
 //footer
 
-#footer_nonbg {
+.footer_nonbg {
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -372,7 +372,7 @@ body {
     }
 }
 
-#footer_nonbg:last-of-type {
+.footer_nonbg:last-of-type {
     border: none;
 }
 
