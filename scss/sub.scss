@@ -412,7 +412,7 @@
                 padding: 7px 0;
                 margin-top: 20px;
                 cursor: pointer;
-                transition: all linear 0.3;
+                transition: all 0.3 linear;
 
                 img {
                     width: 20px;
@@ -808,7 +808,7 @@
                     font-size: 14px;
                 }
 
-                li:first {
+                li:first-of-type {
                     color: black;
                 }
             }

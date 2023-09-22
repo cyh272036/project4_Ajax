@@ -706,7 +706,7 @@ body {
   padding: 7px 0;
   margin-top: 20px;
   cursor: pointer;
-  transition: all linear 0.3;
+  transition: all 0.3s linear;
 }
 #intro .intro_inner .intro_right .location img {
   width: 20px;
@@ -1038,7 +1038,7 @@ body {
   line-height: 36px;
   font-size: 14px;
 }
-#content .content_left .pick .pick_title_list li:first {
+#content .content_left .pick .pick_title_list li:first-of-type {
   color: black;
 }
 #content .content_left .pick .pick_content {

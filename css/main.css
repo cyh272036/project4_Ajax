@@ -535,7 +535,7 @@ body {
   cursor: pointer;
   color: #bdbdbd;
 }
-#today_wrap .today_title .today_title_list li:first {
+#today_wrap .today_title .today_title_list li:first-of-type {
   color: black;
 }
 #today_wrap .today_title .more {
