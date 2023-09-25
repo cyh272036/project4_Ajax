@@ -56,6 +56,7 @@ $(document).ready(function () {
     });
 });
 
+//오늘의 책 슬라이더
 $(document).ready(function () {
     function createSlideFunctions(leftSelector, rightSelector, prevSelector, nextSelector) {
         function todayPrev() {
@@ -205,7 +206,6 @@ $(document).ready(function () {
     $(".prev_control").click(function () {
         prevSlide();
     });
-
 });
 
 //히트 버튼 슬라이드

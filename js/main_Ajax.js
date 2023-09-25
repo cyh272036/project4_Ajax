@@ -387,7 +387,7 @@ $(document).ready(function () {
 
         $('.bs_headline li:first').css('color', 'black');
         $('.bs_headline li').click(function () {
-            $('li').css('color', '');
+            $('li').css('color', '#bdbdbd');
             $(this).css('color', 'black');
         });
     }
