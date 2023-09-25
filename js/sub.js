@@ -186,7 +186,7 @@ $(document).ready(function () {
         var currentScrollTop = $(window).scrollTop();
 
         if (currentScrollTop >= 7800) {
-            sellElement.css('display', 'none');ㅋ
+            sellElement.css('display', 'none');
         } else {
             sellElement.css('display', 'block');
         }
