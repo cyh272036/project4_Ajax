@@ -132,7 +132,7 @@ $(function () {
     })
 });
 
-//헤더
+
 $(document).ready(function () {
     $(window).scroll(function () {
         //스크롤에 따라 본문 리스트 표시
@@ -186,7 +186,7 @@ $(document).ready(function () {
         var currentScrollTop = $(window).scrollTop();
 
         if (currentScrollTop >= 7800) {
-            sellElement.css('display', 'none');
+            sellElement.css('display', 'none');ㅋ
         } else {
             sellElement.css('display', 'block');
         }
